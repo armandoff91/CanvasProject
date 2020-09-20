@@ -23,7 +23,6 @@ class SprayBrush extends PaintFunction {
     // On mouse down, ensure that the pen has these features
     onMouseDown(coord, event) {
         this.context.fillStyle = currentDrawColor;
-        console.log(`current draw color = ${currentDrawColor}`);
         contextReal.lineJoin = contextReal.lineCap = 'round';
         x = coord[0];
         y = coord[1];
@@ -33,7 +32,6 @@ class SprayBrush extends PaintFunction {
                 var radius = getRandomFloat(0, 20);
                 var randomX = x + radius * Math.cos(angle);
                 var randomY = y + radius * Math.sin(angle);
-                console.log(this.tempX);
                 
                 // script for stack
                 tempX.push(randomX);
